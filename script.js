@@ -48,6 +48,10 @@ function renderToHTML() {
 
 // delete function
 function handleDelete(index) {
+  let confirmDelete = confirm('Yakin ingin menghapus?');
+  if (!confirmDelete) {
+    return;
+  }
   //delete 1 data array
   absensi_data.splice(index, 1);
 
